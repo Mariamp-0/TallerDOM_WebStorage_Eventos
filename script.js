@@ -11,7 +11,7 @@ function createTaskElement(taskText) {
     const btnDelete = document.createElement("button")
 
     btnDelete.className = "delete-btn"
-    btnDelete.textContent = "Eliminar"
+    btnDelete.textContent = "X"
 
     btnDelete.addEventListener("click", () => {
         list.remove()
@@ -46,7 +46,7 @@ function saveTasks() {
     const itemsList = document.querySelectorAll(".task-item")
     tasks = []
 
-    
+
     itemsList.forEach((item) => {
         tasks.push(item.firstChild.textContent)
     })
