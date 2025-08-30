@@ -4,11 +4,12 @@ const btnAdd = document.getElementById('add-task-btn');
 const taskList = document.getElementById('task-list');
 
 function createTaskElement(taskText) {
-    let list = document.createElement("li")
+    const list = document.createElement("li")
     list.className = "task-item"
     list.textContent = taskText
 
-    let btnDelete = document.createElement("button")
+    const btnDelete = document.createElement("button")
+
     btnDelete.className = "delete-btn"
     btnDelete.textContent = "Eliminar"
 
@@ -23,6 +24,8 @@ function createTaskElement(taskText) {
 
     saveTasks()
 };
+
+
 
 
 btnAdd.addEventListener("click", () => {
@@ -43,6 +46,7 @@ function saveTasks() {
     const itemsList = document.querySelectorAll(".task-item")
     tasks = []
 
+    
     itemsList.forEach((item) => {
         tasks.push(item.firstChild.textContent)
     })
