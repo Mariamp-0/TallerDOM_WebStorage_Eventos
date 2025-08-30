@@ -55,7 +55,7 @@ function loadTask() {
 
     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [] 
 
-    if (savedTasks.length > 0 ) {
+    if (savedTasks) {
         savedTasks.forEach((task) => {
             createTaskElement(task)
 
